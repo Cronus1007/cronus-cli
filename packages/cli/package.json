@@ -1,0 +1,42 @@
+{
+  "name": "@cronus1007/cronus-cli",
+  "version": "1.0.0",
+  "description": "Cronus CLI",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "cicero": "./index.js"
+  },
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "lint": "eslint .",
+    "postlint": "npm run licchk",
+    "licchk": "license-check",
+    "test:mocha": "mocha",
+    "test:all": "npm run test:mocha && npm run test:cucumber",
+    "test:windows": "npm run test:all",
+    "test:cov": "nyc npm run test",
+    "test": "npm run test:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cronus1007/cronus-cli",
+    "directory": "packages/cli"
+  },
+  "keywords": [
+    "clause",
+    "legal",
+    "tech"
+  ],
+  "author": "Cronus1007",
+  "license": "ISC"
+}
