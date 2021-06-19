@@ -3,7 +3,6 @@
   "description": "You must install [Lerna](https://lernajs.io) to build this multi-package repository.",
   "private": true,
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "doc": "jsdoc -t ./node_modules/jsdoc-sphinx/template/ -c jsdoc.json -r -d ../cicero-docs/docs/api --verbose",
     "coverage": "istanbul-combine -d coverage -r lcov packages/cicero-cli/coverage/*.json packages/cicero-core/coverage/*.json  packages/cicero-engine/coverage/*.json packages/generator-cicero-template/coverage/*.json packages/cicero-server/coverage/*.json && cat ./coverage/lcov.info",
@@ -62,5 +61,9 @@
     "semver": "^7.3.5",
     "sleep-promise": "^9.1.0",
     "source-map-support": "^0.5.19"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=5"
   }
 }
