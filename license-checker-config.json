@@ -1,0 +1,23 @@
+{
+    "folder": ".",
+    "license": "HEADER",
+    "exact_paths_method": "EXCLUDE",
+    "exact_paths": [
+      ".git",
+      ".github",
+      "node_modules",
+      "packages",
+      "softhsm",
+      "build.cfg",
+      "README.md",
+      "CONTRIBUTING.md",
+      "DEVELOPERS.md",
+      "NOTICES.md",
+      "CHARTER.md",
+      "LICENSE",
+      "HEADER",
+      "docs/",
+      "coverage",
+      ".DS_Store"
+    ]
+}
