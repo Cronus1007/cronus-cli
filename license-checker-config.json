@@ -19,5 +19,52 @@
       "docs/",
       "coverage",
       ".DS_Store"
-    ]
+    ],
+    "file_type_method": "EXCLUDE",
+    "file_types": [
+      ".yml",
+      ".log",
+      ".enc",
+      ".xmind",
+      ".deb",
+      ".vo",
+      ".glob",
+      ".aux",
+      ".v.d",
+      ".ctoj",
+      ".depends",
+      ".annot",
+      ".byte",
+      ".cmi",
+      ".cmo",
+      ".tem",
+      ".txt",
+      ".config",
+      ".coq_modules"
+    ],
+    "insert_license": false,
+    "license_formats": {
+      "js|ergo|cto": {
+        "prepend": "/*",
+        "append": " */",
+        "eachLine": {
+          "prepend": " * "
+        }
+      },
+      "v|atd|mll|mly": {
+        "prepend": "*",
+        "append": " *)",
+        "eachLine": {
+          "prepend": " * "
+        }
+      },
+      "gitattributes|cfg|ocp-indent": {
+        "eachLine": {
+          "prepend": "# "
+        }
+      },
+      "md": {
+        "file": "HEADER.md"
+      }
+    }
 }

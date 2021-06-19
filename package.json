@@ -1,4 +1,24 @@
 {
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^6.2.0",
+    "coveralls": "^3.1.0",
+    "dayjs": "^1.10.5",
+    "eslint": "^7.29.0",
+    "istanbul-combine": "^0.3.0",
+    "istanbul-merge": "^1.1.1",
+    "jsdoc": "^3.6.7",
+    "jsdoc-sphinx": "0.0.6",
+    "lerna": "^4.0.0",
+    "license-check-and-add": "^4.0.2",
+    "semver": "^7.3.5",
+    "sleep-promise": "^9.1.0",
+    "source-map-support": "^0.5.19"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=5"
+  },
   "name": "cronus",
   "description": "You must install [Lerna](https://lernajs.io) to build this multi-package repository.",
   "private": true,
@@ -24,46 +44,6 @@
   ],
   "author": "Cronus1007",
   "license": "Apache-2.0",
-  "file_type_method": "EXCLUDE",
-  "file_types": [
-      ".yml",
-      ".log",
-      ".enc",
-      ".xmind",
-      ".deb",
-      ".vo",
-      ".glob",
-      ".aux",
-      ".v.d",
-      ".ctoj",
-      ".depends",
-      ".annot",
-      ".byte",
-      ".cmi",
-      ".cmo",
-      ".tem",
-      ".txt",
-      ".config",
-      ".coq_modules"
-  ],
-  "devDependencies": {
-    "colors": "^1.4.0",
-    "concurrently": "^6.2.0",
-    "coveralls": "^3.1.0",
-    "dayjs": "^1.10.5",
-    "eslint": "^7.29.0",
-    "istanbul-combine": "^0.3.0",
-    "istanbul-merge": "^1.1.1",
-    "jsdoc": "^3.6.7",
-    "jsdoc-sphinx": "0.0.6",
-    "lerna": "^4.0.0",
-    "license-check-and-add": "^4.0.2",
-    "semver": "^7.3.5",
-    "sleep-promise": "^9.1.0",
-    "source-map-support": "^0.5.19"
-  },
-  "engines": {
-    "node": ">=12",
-    "npm": ">=5"
-  }
+  "license-check-and-add-config": "licchk",
+  "dependencies": {}
 }
