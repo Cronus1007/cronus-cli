@@ -1,0 +1,14 @@
+{
+    "src": [
+      "**/*.js",
+      "!./test/data/**/*",
+      "!./coverage/**/*",
+      "!./node_modules/**/*",
+      "!./out/**/*",
+      "!index.js"
+    ],
+    "path": "header.txt",
+    "blocking": true,
+    "logInfo": false,
+    "logError": true
+}
