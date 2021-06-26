@@ -4,7 +4,7 @@
 // npm install node-forge
 const forge = require('node-forge');
 
-new Promise((f, r) => forge.pki.rsa.generateKeyPair(
+module.exports = new Promise((f, r) => forge.pki.rsa.generateKeyPair(
     2048, (err, pair) => err ? r(err) : f(pair)))
     .then(keypair => {
         const priv = keypair.privateKey;

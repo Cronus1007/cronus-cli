@@ -47,11 +47,12 @@ require('yargs')
         });
     } , (argv) => {
         try {
-            argv = Commands.validateGeneratePEMArgs(argv);
+            argv = Commands.validatePEMArgs(argv);
             const options = {
                 warnings: argv.warnings,
+                output: argv.output
             };
-            return Commands.draft(options)
+            return Commands.draft(argv,options)
                 .then((result) => {
                     if(result) {
                         log(chalk.blue(result));}
