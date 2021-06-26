@@ -47,6 +47,7 @@ require('yargs')
         });
     } , (argv) => {
         try {
+            argv = Commands.validatePEMArgs(argv);
             const options = {
                 warnings: argv.warnings,
             };
