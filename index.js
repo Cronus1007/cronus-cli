@@ -16,6 +16,8 @@
 'use strict';
 
 const Commands = require('./lib/commands');
+const chalk = require('chalk');
+const log = console.log;
 
 require('yargs')
     .scriptName('cronus')
@@ -23,7 +25,44 @@ require('yargs')
     .demandCommand(1, '# Please specify a command')
     .recommendCommands()
     .strict()
-    .command('generate-pem','generate public and private keys', (yargs) => {})
+    .command('generate-pem','generate public and private keys', (yargs) => {
+        yargs.option('output', {
+            describe: 'path to the output file',
+            type: 'string'
+        });
+        yargs.option('currentTime', {
+            describe: 'set current time',
+            type: 'string',
+            default: null
+        });
+        yargs.option('utcOffset', {
+            describe: 'set UTC offset',
+            type: 'number',
+            default: null
+        });
+        yargs.option('warnings', {
+            describe: 'print warnings',
+            type: 'boolean',
+            default: false
+        });
+    } , (argv) => {
+        try {
+            const options = {
+                warnings: argv.warnings,
+            };
+            return Commands.draft(options)
+                .then((result) => {
+                    if(result) {
+                        log(chalk.blue(result));}
+                })
+                .catch((err) => {
+                    log(chalk.red(err.message));
+                });
+        } catch (err) {
+            log(chalk.red(err.message));
+            return;
+        }
+    })
     .command('sign', 'generate digital signatures from the required pem files', (yargs) => {})
     .command('archive', 'create a signature archive', (yargs) => {})
     .option('verbose', {
