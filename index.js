@@ -17,7 +17,7 @@
 
 const Commands = require('./lib/commands');
 
-require("yargs")
+require('yargs')
     .scriptName('cronus')
     .usage('$0 <cmd> [args]')
     .demandCommand(1, '# Please specify a command')

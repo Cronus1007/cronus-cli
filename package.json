@@ -45,7 +45,9 @@
   },
   "homepage": "https://github.com/Cronus1007/cronus-cli#readme",
   "dependencies": {
+    "chalk": "^4.1.1",
     "mkdirp": "^1.0.4",
+    "node-forge": "^0.10.0",
     "uuid": "^8.3.2",
     "yargs": "^17.0.1"
   },
