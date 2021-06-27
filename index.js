@@ -18,6 +18,7 @@
 const Commands = require('./lib/commands');
 const chalk = require('chalk');
 const log = console.log;
+const options = {};
 
 require('yargs')
     .scriptName('cronus')
@@ -26,8 +27,12 @@ require('yargs')
     .recommendCommands()
     .strict()
     .command('generate-pem','generate public and private keys', (yargs) => {
-        yargs.option('output', {
-            describe: 'path to the output file',
+        yargs.option('puboutput', {
+            describe: 'path to the output file consisting of public keys',
+            type: 'string'
+        });
+        yargs.option('privoutput', {
+            describe: 'path to the output file consisting of private keys',
             type: 'string'
         });
         yargs.option('currentTime', {
@@ -48,10 +53,9 @@ require('yargs')
     } , (argv) => {
         try {
             argv = Commands.validatePEMArgs(argv);
-            const options = {
-                warnings: argv.warnings,
-                output: argv.output
-            };
+            options.warnings = argv.warnings;
+            options.puboutput = argv.puboutput;
+            options.privoutput = argv.privoutput;
             return Commands.draft(argv,options)
                 .then((result) => {
                     if(result) {
@@ -73,5 +77,3 @@ require('yargs')
     })
     .help()
     .argv;
-
-// console.log(options)
