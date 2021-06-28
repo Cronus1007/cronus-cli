@@ -12,14 +12,14 @@ module.exports = new Promise((f, r) => forge.pki.rsa.generateKeyPair(
         // PEM serialize: public key
         const pubPem  = forge.pki.publicKeyToPem(pub);
         console.log('Public Key PEM:', pubPem);
-        const pub2 = forge.pki.publicKeyFromPem(pubPem);
+        // const pub2 = forge.pki.publicKeyFromPem(pubPem);
 
         // PEM serialize: private key
         const privPem  = forge.pki.privateKeyToPem(priv);
         console.log('Private Key PEM:', privPem);
-        const priv2 = forge.pki.privateKeyFromPem(privPem);
+        // const priv2 = forge.pki.privateKeyFromPem(privPem);
         // make public key from private key
-        const pub3 = forge.pki.rsa.setPublicKey(priv2.n, priv2.e);
+        // const pub3 = forge.pki.rsa.setPublicKey(priv2.n, priv2.e);
 
         // enc/dec with Obj Pub and PEM Priv
         // console.log('\n[Enc by Obj/Dec by PEM]');
