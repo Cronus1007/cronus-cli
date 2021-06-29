@@ -56,7 +56,7 @@ require('yargs')
             options.warnings = argv.warnings;
             options.puboutput = argv.puboutput;
             options.privoutput = argv.privoutput;
-            return Commands.draft(argv,options)
+            return Commands.generatePEM(argv,options)
                 .then((result) => {
                     if(result) {
                         log(chalk.blue(result));}
@@ -69,7 +69,40 @@ require('yargs')
             return;
         }
     })
-    .command('sign', 'generate digital signatures from the required pem files', (yargs) => {})
+    .command('sign', 'generate digital signatures from the required pem files', (yargs) => {
+        yargs.option('pubinput', {
+            describe: 'path to the input file consisting of public keys',
+            type: 'string'
+        });
+        yargs.option('privinput', {
+            describe: 'path to the input file consisting of private keys',
+            type: 'string'
+        });
+        yargs.option('currentTime', {
+            describe: 'set current time',
+            type: 'string',
+            default: null
+        });
+        yargs.option('utcOffset', {
+            describe: 'set UTC offset',
+            type: 'number',
+            default: null
+        });
+        yargs.option('warnings', {
+            describe: 'print warnings',
+            type: 'boolean',
+            default: false
+        });
+    } , (argv) => {
+        try {
+            options.warnings = argv.warnings;
+            options.pubinput = argv.pubinput;
+            options.privinput = argv.privinput;
+            argv = Commands.validateSignArgs(argv,options);
+        } catch (err) {
+            log(chalk.red(err.message));
+        }
+    })
     .command('archive', 'create a signature archive', (yargs) => {})
     .option('verbose', {
         alias: 'v',
