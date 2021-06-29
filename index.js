@@ -78,6 +78,10 @@ require('yargs')
             describe: 'path to the input file consisting of private keys',
             type: 'string'
         });
+        yargs.option('message', {
+            describe: '',
+            type: 'string',
+        });
         yargs.option('currentTime', {
             describe: 'set current time',
             type: 'string',
@@ -98,6 +102,7 @@ require('yargs')
             options.warnings = argv.warnings;
             options.pubinput = argv.pubinput;
             options.privinput = argv.privinput;
+            options.message = argv.message;
             argv = Commands.validateSignArgs(argv,options);
             return Commands.generateSignature(argv,options);
         } catch (err) {
