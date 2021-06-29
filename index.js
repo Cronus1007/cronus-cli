@@ -99,11 +99,11 @@ require('yargs')
             options.pubinput = argv.pubinput;
             options.privinput = argv.privinput;
             argv = Commands.validateSignArgs(argv,options);
+            return Commands.generateSignature(argv,options);
         } catch (err) {
             log(chalk.red(err.message));
         }
     })
-    .command('archive', 'create a signature archive', (yargs) => {})
     .option('verbose', {
         alias: 'v',
         default: false
