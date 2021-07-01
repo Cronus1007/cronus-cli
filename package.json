@@ -57,10 +57,13 @@
     "chai-things": "^0.2.0",
     "cucumber": "^7.0.0-rc.0",
     "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "jsdoc": "^3.6.7",
     "license-check": "^1.1.5",
     "mocha": "^9.0.1",
     "nyc": "^15.1.0",
+    "prettier": "^2.3.2",
     "tmp-promise": "^3.0.2"
   },
   "nyc": {
