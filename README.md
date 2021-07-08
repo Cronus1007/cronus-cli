@@ -91,6 +91,6 @@ If you like **cronus**, please consider donating to our [Open Collective](https:
 
 ## Code of Conduct
 
-Guidelines to how the cronus organization expects you to behave is documented under [Code of Conduct](./CODE_OF_CONDUCT.md)
+Guidelines to how the cronus organization expects you to behave is documented under [Code of Conduct](./CODE-OF-CONDUCT.md)
 
 ___
