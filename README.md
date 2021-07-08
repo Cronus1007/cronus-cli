@@ -42,7 +42,7 @@ ___
 ### ◦ Commands
 
 Supporting developers is an important task for cronus CLI.
-Thus, webpack CLI provides different commands for many common tasks.
+Thus, cronus CLI provides different commands for many common tasks.
 
 ```cronus generate-pem``` To generate public and private keys in .pem format 
 
