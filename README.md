@@ -1,7 +1,7 @@
 <div align="center">
-    <a href="https://github.com/cronus1007">
+    <!-- <a href="https://github.com/cronus1007">
         <img width="200" height="200" src="https://images.pexels.com/photos/5987154/pexels-photo-5987154.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
-    </a>
+    </a> -->
 </div>
 
 <h1 align="center">Cronus CLI</h1>
