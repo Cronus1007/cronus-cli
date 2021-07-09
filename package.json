@@ -1,6 +1,6 @@
 {
   "name": "@cronus1007/cronus-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cronus CLI",
   "engines": {
     "node": ">=12",
